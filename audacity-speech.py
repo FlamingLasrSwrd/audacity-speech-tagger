@@ -1,8 +1,8 @@
 from google.cloud import speech_v1
 from google.cloud import speech_v1p1beta1
 import io
-from pipe_test import do_command
-import base64
+from pypeclient import PypeClient
+
 
 def sample_recognize(local_file_path, model='default', language_code='en-US', enable_word_confidence=True):
     """
@@ -38,33 +38,20 @@ def sample_recognize(local_file_path, model='default', language_code='en-US', en
         alternative = result.alternatives[0]
         print(u"Transcript: {}".format(alternative.transcript))
 
-def select_all():
-    do_command('SelAllTracks')
-
-def export_wav(filename):
-    do_command(f'Export2: Filename={filename} NumChannels=1')
-
-def new_label():
-    do_command(f'PasteNewLabel')
-
-def set_label(label_text, label_num, start, end):
-    do_command(f'SetLabel: Label={label_num} Text="{label_text}" Start={start} End={end}')
-
-def select(start, end, relativeto='ProjectStart'):
-    do_command(f'Select: Start={start} End={end} RelativeTo={relativeto}')
 
 if __name__ == '__main__':
     audio_file = '/tmp/exported.wav'
-    select_all()
-    export_wav(audio_file)
+    pc = PypeClient()
+    pc.selectAll()
+    pc.exportWav(audio_file)
     res = sample_recognize(audio_file)
 
     i = 0
     for ws in res.results[0].alternatives[0].words:
         label = ws.word
-        start_time = ws.start_time.seconds + ws.start_time.nanos / 1000000000
-        end_time = ws.end_time.seconds + ws.end_time.nanos / 1000000000
-        select(start_time, end_time)
-        new_label()
-        set_label(label, i, start_time, end_time)
+        startTime = ws.start_time.seconds + ws.start_time.nanos / 1000000000
+        endTime = ws.end_time.seconds + ws.end_time.nanos / 1000000000
+        pc.select(startTime, endTime)
+        pc.newLabel()
+        pc.setLabel(label, i, startTime, endTime)
         i += 1
