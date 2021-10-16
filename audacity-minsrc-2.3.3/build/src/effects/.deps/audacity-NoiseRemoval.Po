@@ -1,0 +1,16 @@
+effects/audacity-NoiseRemoval.o: ../../src/effects/NoiseRemoval.cpp \
+ /usr/include/stdc-predef.h ../../src/effects/../Audacity.h configunix.h \
+ ../../src/effects/NoiseRemoval.h ../../src/effects/../Experimental.h \
+ /usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.0/wx/setup.h
+
+/usr/include/stdc-predef.h:
+
+../../src/effects/../Audacity.h:
+
+configunix.h:
+
+../../src/effects/NoiseRemoval.h:
+
+../../src/effects/../Experimental.h:
+
+/usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.0/wx/setup.h:

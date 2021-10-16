@@ -1,1 +1,3 @@
 .private/
+__pycache__/
+audacity-minisrc-2.3.3/

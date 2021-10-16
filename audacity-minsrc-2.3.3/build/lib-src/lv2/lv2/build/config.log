@@ -1,0 +1,16 @@
+# project lv2 (1.10.0) configured on Mon Apr 27 21:37:58 2020 by
+# waf 1.7.16 (abi 98, python 20711f0 on linux2)
+# using waf --prefix=. --include=. --no-plugins configure
+#
+----------------------------------------
+Setting top to
+/home/user/projects/audacity-speech-tagger/audacity-minsrc-2.3.3/build/lib-src/lv2/lv2
+----------------------------------------
+Setting out to
+/home/user/projects/audacity-speech-tagger/audacity-minsrc-2.3.3/build/lib-src/lv2/lv2/build
+----------------------------------------
+Checking for 'gcc' (c compiler)
+find program=['gcc', 'cc'] paths=['/home/user/anaconda3/envs/py36/bin', '/home/user/.rbenv/plugins/ruby-build/bin', '/home/user/.rbenv/shims', '/home/user/.rbenv/bin', '/home/user/gems/bin', '/home/user/anaconda3/bin', '/usr/local/bin', '/home/user/bin', '/home/user/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin', '/usr/share/logtalk/tools/lgtdoc/xml', '/usr/share/logtalk/scripts', '/usr/share/logtalk/integration'] var='CC' -> '/usr/bin/gcc'
+find program=['ar'] paths=['/home/user/anaconda3/envs/py36/bin', '/home/user/.rbenv/plugins/ruby-build/bin', '/home/user/.rbenv/shims', '/home/user/.rbenv/bin', '/home/user/gems/bin', '/home/user/anaconda3/bin', '/usr/local/bin', '/home/user/bin', '/home/user/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin', '/usr/share/logtalk/tools/lgtdoc/xml', '/usr/share/logtalk/scripts', '/usr/share/logtalk/integration'] var='AR' -> '/usr/bin/ar'
+/usr/bin/gcc
+(tool compiler_c is already loaded, skipping)
